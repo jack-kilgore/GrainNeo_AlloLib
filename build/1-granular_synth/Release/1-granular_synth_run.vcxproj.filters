@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\96c7253e5561ab5bf03c45119a99a817\1-granular_synth_run.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\AlloLib\cmake\single_file\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\1-granular_synth_run" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2F4CEFB9-E124-3BA2-8EEC-A6F110564859}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
