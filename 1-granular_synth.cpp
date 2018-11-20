@@ -1,15 +1,24 @@
-#include <iostream>
-#include <string>
-#include "al/core.hpp"
-#include "Gamma/Oscillator.h"
-#include "Gamma/Envelope.h"
-#include "Gamma/Domain.h"
-#include "synths.h"
+//make a load_dir 
+//make a randomizer when playback pos is idol 
+// conenct QuNeo to paramters along with a GUI 
+  //can send feedback back to QUNEO LEDS???? 
 
+#include "Gamma/SoundFile.h"
+using namespace gam;
+
+#include "al/core.hpp"
+#include "al/util/imgui/al_Imgui.hpp"
+#include "al/util/ui/al_Parameter.hpp"
 using namespace al;
-using namespace std;
-using namespace diy;
 using namespace osc;
+
+#include "synths.h"
+using namespace diy;
+
+#include <vector>
+using namespace std;
+
+
 
 
 const int SAMPLE_RATE = 44100;
@@ -17,34 +26,130 @@ const int BLOCK_SIZE = 512;
 const int OUTPUT_CHANNELS = 2;
 const int INPUT_CHANNELS = 2;
 
+struct Granulator {
 
-// define new classes (aka struct) here
-//
-//SoundFile soundFile;
+  void load(string fileName){
+    SearchPaths searchPaths; 
+    searchPaths.addSearchPath("..");
+
+    string filePath = searchPaths.find(fileName).filepath();
+    SoundFile soundFile;
+    soundFile.path(filePath);
+    if(!soundFile.openRead()){
+      cout << "We could not read " << fileName << "1" << endl;
+      exit(1);
+    }
+    if(soundFile.channels() != 1){
+      cout << fileName << " is not a mono file." << endl;
+      exit(1);
+    }
+
+    Array *a = new Array();
+    a->size = soundFile.frames();
+    a->data = new float[a->size];
+    soundFile.read(a->data, a->size);
+    this->soundClip.push_back(a);
+
+    soundFile.close();
+  }
+
+  //keep some sound clips in memory 
+  vector<Array*> soundClip;
+
+  struct Grain{ 
+    Array* source = nullptr;
+    Line index;
+    AttackDecay envelope;
+    bool active = false;
+
+    float operator()(){
+      float f = envelope() * source->get(index());
+
+      if(index.done()) active = false;
+
+      return f;
+    }
+  };
+
+  //storing grains 
+  vector<Grain> grain;
+
+  Granulator(){
+    //arbitrary fixed number for how many grains we will allocate 
+    grain.resize(1000);
+  }
+
+  int activeGrainCount = 0;
+
+  //tweakable parameters 
+  int whichClip = 0;   //(0, source.size())
+  float grainDuration = 0.25; //in seconds 
+  float startPosition = 0.25; // (0,1)
+  float peakPosition = 0.1;   // (0,1)
+  float amplitudePeak = 0.9;  // (0,1)
+  float playbackRate = 0;     // (-1,1)
+
+  //this governs the rate at which grains are created 
+  Edge grainBirth; 
+
+  //this method makes a new grain out of a dead/inactive one. 
+  // 
+  void recycle(Grain& g){
+    //choose sound clip the grain pulls from 
+    g.source = soundClip[whichClip];
+
+    //startTime and endTime are in units of sample 
+    float startTime = g.source->size * startPosition;
+    float endTime = startTime + grainDuration * ::SAMPLE_RATE;
+    float t = pow(2.0, playbackRate) * grainDuration * ::SAMPLE_RATE;
+    startTime -= t/2;  //ask Karl about these two lines
+    endTime =+ t/2;
+    g.index.set(startTime, endTime, grainDuration); //index refers to the line fn within grain 
+
+    //riseTime and fallTime are in units of second 
+    float riseTime = grainDuration * peakPosition;
+    float fallTime = grainDuration - riseTime;
+    g.envelope.set(riseTime, fallTime, amplitudePeak);
+
+    //permit grain to sound! 
+    g.active = true;
+  }
+
+  //make the next sample 
+  float operator()(){
+    //figure out if we should generate more grains
+    if(grainBirth()){
+      for (Grain& g : grain) //what does this for loop line mean?
+        if(!g.active){       //iterate through the vector containing grains?
+          recycle(g);
+          break;
+        }                  
+
+    }
+
+    //figure out which grains are active. for each active grain, get the 
+    //next sample; sum all these up and return the sum;
+
+    float f = 0;
+    activeGrainCount = 0;
+    for(Grain& g : grain)
+      if(g.active){
+        activeGrainCount++;
+        f+= g(); //ask Karl to go through data flow of this line 
+      }
+    return f;
+  }
+
+};
 
 struct MyApp : public App {
-   double frequency;
-   gam::Sine<> sig;
-   Line line;
-   Edge edge;
+   Granulator granulator;
    Recv server;
 
-  // put "class" variables here
-  //
-  
-
-
-  // called once, before any other callbacks
-  //
   void onCreate() override {
-     gam::Domain::master().spu(audioIO().framesPerSecond());
-     sig.freq(120);
-     line.set(1,0,0.3);
-     edge.period(0.2);
      server.open(9020,"localhost",0.05);
      server.handler(*this);
      server.start();
-     frequency = 100;
   }
 
   // called once per graphics frame ~30Hz
@@ -59,15 +164,18 @@ struct MyApp : public App {
   void onSound(AudioIOData& io) override {
     while (io()) {
       // this inner code block runs once per sample
-      sig.freq(440);
-      float s = sig()*0.2;
+      float s = 0;
       io.out(0) = s;
       io.out(1) = s;
     }
   }
 
+//look at interaction tutorial by Andres
+  // PARAMETER class 
+    //look into how to fit the below name space of QuNeo into 
+    // Parameter p {"name", "group", 0.0, "prefix", -1.0f, 1.0f}
   void onMessage(osc::Message& m) override {
-    //m.print();
+    m.print();
     if(m.addressPattern() == "/quneo/vSliders/3/location")
     {
 		int val;
@@ -99,6 +207,7 @@ int main() {
   app.start();
   return 0;
 }
+
 
 
 

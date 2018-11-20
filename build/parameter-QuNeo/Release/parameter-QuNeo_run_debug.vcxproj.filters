@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\parameter-QuNeo\Release\CMakeFiles\00d253ba18cb1ff6641a98f4f993a357\parameter-QuNeo_run_debug.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\AlloLib\cmake\single_file\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\parameter-QuNeo\Release\CMakeFiles\parameter-QuNeo_run_debug" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{733D9D05-D76E-3C63-A7BC-42A7E0361245}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
