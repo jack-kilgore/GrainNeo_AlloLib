@@ -39,7 +39,7 @@ struct Granulator {
       cout << "We could not read " << fileName << "1" << endl;
       exit(1);
     }
-    if(soundFile.channels() >= 2){
+    if(soundFile.channels() > 2){
       cout << fileName << " is not a mono or stereo file" << endl;
       exit(1);
     }
@@ -50,16 +50,14 @@ struct Granulator {
       a->data = new float[a->size];
       soundFile.read(a->data, a->size);
       this->soundClip.push_back(a);
+    } else {
+      Array *result = new Array();
+      result->size = soundFile.frames()*soundFile.channels();
+      result->data = new float[result->size];
+      soundFile.readAllD(result->data);
+      this->soundClip.push_back(result);
     }
 
-    if(soundFile.channels() == 2){
-      Array *stereo = new Array();
-      stereo->size = soundFile.frames()*soundFile.channels();
-      stereo->data = new float[stereo->size];
-      soundFile.read(stereo->data, stereo->size);
-      this->soundClip.push_back(stereo);
-    }
-    
 
     soundFile.close();
   }
@@ -170,7 +168,7 @@ struct MyApp : public App {
      granulator.load("2.wav");
      granulator.load("3.wav");
      granulator.load("4.wav");
-     //granulator.load("improv_stereo2.wav");
+     granulator.load("panlinespoonDrop.aiff");
   }
 
   void onAnimate(double dt) override {
@@ -194,7 +192,7 @@ struct MyApp : public App {
     granulator.amplitudePeak = dbtoa(volume);
 
     ImGui::SliderFloat("Envelop Parameter", &granulator.peakPosition, 0, 1);
-    ImGui::SliderFloat("Grain Duration", &granulator.grainDuration, 0.001, 0.5);
+    ImGui::SliderFloat("Grain Duration", &granulator.grainDuration, 0.001, 3);
 
     static float midi = 10;
     ImGui::SliderFloat("Birth Frequency", &midi, -16, 85);
