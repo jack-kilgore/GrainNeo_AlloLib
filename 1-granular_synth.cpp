@@ -43,7 +43,7 @@ struct Granulator {
     Array *buffer = new Array();
     buffer->size = soundFile.frames()*soundFile.channels();
     buffer->data = new float[buffer->size];
-    soundFile.readAllD(buffer->data);
+    soundFile.read(buffer->data,buffer->size);
     this->soundClip.push_back(buffer);
       
     soundFile.close();
@@ -188,8 +188,6 @@ struct MyApp : public App {
     endIMGUI_minimal(show_gui);
   }
 
-  // called once per audio frame ~86Hz (SAMPLE_RATE / BLOCK_SIZE)
-  //
   void onSound(AudioIOData& io) override {
     while (io()) {
       // this inner code block runs once per sample
