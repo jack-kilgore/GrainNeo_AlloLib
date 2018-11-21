@@ -36,29 +36,16 @@ struct Granulator {
     SoundFile soundFile;
     soundFile.path(filePath);
     if(!soundFile.openRead()){
-      cout << "We could not read " << fileName << "1" << endl;
-      exit(1);
-    }
-    if(soundFile.channels() > 2){
-      cout << fileName << " is not a mono or stereo file" << endl;
+      cout << "We could not read " << fileName << "!" << endl;
       exit(1);
     }
 
-    if(soundFile.channels() == 1){
-      Array *a = new Array();
-      a->size = soundFile.frames();
-      a->data = new float[a->size];
-      soundFile.read(a->data, a->size);
-      this->soundClip.push_back(a);
-    } else {
-      Array *result = new Array();
-      result->size = soundFile.frames()*soundFile.channels();
-      result->data = new float[result->size];
-      soundFile.readAllD(result->data);
-      this->soundClip.push_back(result);
-    }
-
-
+    Array *buffer = new Array();
+    buffer->size = soundFile.frames()*soundFile.channels();
+    buffer->data = new float[buffer->size];
+    soundFile.readAllD(buffer->data);
+    this->soundClip.push_back(buffer);
+      
     soundFile.close();
   }
 
