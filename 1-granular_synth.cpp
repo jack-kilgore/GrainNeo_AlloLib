@@ -2,6 +2,7 @@
 //make a randomizer when playback pos is idol 
 // conenct QuNeo to paramters along with a GUI 
   //can send feedback back to QUNEO LEDS???? 
+//ask karl how to output speaker separation 
 
 #include "Gamma/SoundFile.h"
 using namespace gam;
@@ -84,6 +85,7 @@ struct Granulator {
   float peakPosition = 0.1;   // (0,1)
   float amplitudePeak = 0.9;  // (0,1)
   float playbackRate = 0;     // (-1,1)
+  float startRandomRange = 1.0;
 
   //this governs the rate at which grains are created 
   Edge grainBirth; 
@@ -95,7 +97,7 @@ struct Granulator {
     g.source = soundClip[whichClip];
 
     //startTime and endTime are in units of sample 
-    float startTime = g.source->size * startPosition;
+    float startTime = g.source->size * startPosition* rnd::uniformi(1.0,startRandomRange); //how to put var in here
     float endTime = startTime + grainDuration * ::SAMPLE_RATE;
     float t = pow(2.0, playbackRate) * grainDuration * ::SAMPLE_RATE;
     startTime -= t/2;  //ask Karl about these two lines
@@ -173,6 +175,7 @@ struct MyApp : public App {
     ImGui::SliderInt("Sound Clip", &granulator.whichClip, 0, 5);
     ImGui::SliderFloat("Start Position", &granulator.startPosition, 0, 1);
     ImGui::SliderFloat("Playback Rate", &granulator.playbackRate, -1, 1);
+    ImGui::SliderFloat("Start Positon Randomness", &granulator.startRandomRange,1, 12);
 
     static float volume = -7;
     ImGui::SliderFloat("Loudness", &volume, -42, 0);
