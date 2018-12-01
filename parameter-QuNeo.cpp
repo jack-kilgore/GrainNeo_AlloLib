@@ -85,8 +85,7 @@ private:
     */
     Parameter X {"X", "Position", 0.0, "", -1.0f, 1.0f};
     Parameter Y {"Y", "Position", 0.0, "", -1.0f, 1.0f};
-    Parameter Size {"/location", "/vSliders/3", 1.0, "/quneo",-0.1f,3.0f};
-
+    Parameter Size {"location", "vSliders/3", 1.0, "quneo",-0.1f,3.0f};  
     ControlGUI gui;
 };
 

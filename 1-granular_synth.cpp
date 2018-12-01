@@ -1,8 +1,14 @@
-//make a load_dir 
+//make a load_dir
+// git pull
+// git submodule update --init --recursive
+  // in KARLS MAT240 repo, this will update the allolib repo within it 
 //make a randomizer when playback pos is idol 
 // conenct QuNeo to paramters along with a GUI 
   //can send feedback back to QUNEO LEDS???? 
 //ask karl how to output speaker separation 
+//use type int Parameter 
+  //ParameterInt 
+    //ABOVE IS HOW YOU DO THIS 
 
 #include "Gamma/SoundFile.h"
 using namespace gam;
@@ -73,7 +79,7 @@ struct Granulator {
 
   Granulator(){
     //arbitrary fixed number for how many grains we will allocate 
-    grain.resize(1000);
+    grain.resize(1000); //wont create more than 1000 grains 
   }
 
   int activeGrainCount = 0;
@@ -140,6 +146,9 @@ struct Granulator {
 
 };
 
+Parameter Y {"location", "vSliders/3", 0.0, "quneo", -1.0f, 1.0f};
+
+
 struct MyApp : public App {
    bool show_gui = true;
    float background = 0.21;
@@ -151,6 +160,9 @@ struct MyApp : public App {
      server.open(9020,"localhost",0.05);
      server.handler(*this);
      server.start();
+     //ParameterServer() << Y;
+     parameterServer().addListener("127.0.0.1", 9020);
+
 
      granulator.load("0.wav");
      granulator.load("1.wav");
@@ -216,8 +228,10 @@ struct MyApp : public App {
     {
 		int val;
 		m >> val;
-      cout << "vSlider3 Location: "<< val << endl;
-      //m >> frequency;
+    float v = (val/127.0f)*3;
+    if(v < 0.0001) v = 0.0001;
+      cout << "vSlider3 Location: "<< v << endl;
+      granulator.grainDuration = v;
 
     }
     if(m.addressPattern() == "/quneo/longSlider/width")

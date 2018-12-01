@@ -23,6 +23,9 @@ AL_APP_RUN:BOOL=1
 
 AL_VERBOSE_OUTPUT:BOOL=OFF
 
+//Building on Windows
+AL_WINDOWS:BOOL=1
+
 APPVEYOR_BUILD:BOOL=OFF
 
 //Path to a file.
@@ -103,6 +106,9 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
+
+//No help, variable specified on the command line.
+CMAKE_GENERATOR_PLATFORM:UNINITIALIZED=x64
 
 //User executables (bin)
 CMAKE_INSTALL_BINDIR:PATH=bin
@@ -423,6 +429,9 @@ VULKAN_INCLUDE_DIR:PATH=VULKAN_INCLUDE_DIR-NOTFOUND
 //Path to a library.
 VULKAN_LIBRARY:FILEPATH=VULKAN_LIBRARY-NOTFOUND
 
+//Path to a library.
+VULKAN_STATIC_LIBRARY:FILEPATH=VULKAN_STATIC_LIBRARY-NOTFOUND
+
 //Dependencies for the target
 al_LIB_DEPENDS:STATIC=general;opengl32;general;winmm;general;Ws2_32;general;ole32;general;winmm;general;ksuser;general;uuid;general;ole32;general;winmm;general;ksuser;general;uuid;general;Gamma;general;glfw;general;glew_s;
 
@@ -506,8 +515,6 @@ CMAKE_EXTRA_GENERATOR:INTERNAL=
 CMAKE_GENERATOR:INTERNAL=Visual Studio 15 2017
 //Generator instance identifier.
 CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools
-//Name of generator platform.
-CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Have include pthread.h
@@ -678,6 +685,8 @@ SNDFILE_LIBRARY-ADVANCED:INTERNAL=1
 VULKAN_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: VULKAN_LIBRARY
 VULKAN_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: VULKAN_STATIC_LIBRARY
+VULKAN_STATIC_LIBRARY-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/Project
 
