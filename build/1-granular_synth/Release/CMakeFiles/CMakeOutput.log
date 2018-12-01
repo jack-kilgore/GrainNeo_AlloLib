@@ -9,40 +9,40 @@ The output was:
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 11/10/2018 12:50:34 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.13.0-rc1\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+Build started 12/1/2018 3:13:45 PM.
+Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.12.4\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdC.tlog\".
 InitializeBuildStatus:
   Creating "Debug\CompilerIdC.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /nologo /W0 /WX- /diagnostics:classic /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue CMakeCCompilerId.c
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\CL.exe /c /nologo /W0 /WX- /diagnostics:classic /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
   CMakeCCompilerId.c
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
-  CompilerIdC.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.13.0-rc1\CompilerIdC\.\CompilerIdC.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.12.4\CompilerIdC\.\CompilerIdC.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
   :VCEnd
-  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\Hostx86\x86\cl.exe
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\Hostx86\x64\cl.exe
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.13.0-rc1\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.12.4\CompilerIdC\CompilerIdC.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.55
+Time Elapsed 00:00:01.70
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
 
-The C compiler identification is MSVC, found in "C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/3.13.0-rc1/CompilerIdC/CompilerIdC.exe"
+The C compiler identification is MSVC, found in "C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/3.12.4/CompilerIdC/CompilerIdC.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler:  
@@ -54,115 +54,115 @@ The output was:
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 11/10/2018 12:50:36 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.13.0-rc1\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+Build started 12/1/2018 3:13:47 PM.
+Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.12.4\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdCXX.tlog\".
 InitializeBuildStatus:
   Creating "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /nologo /W0 /WX- /diagnostics:classic /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue CMakeCXXCompilerId.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\CL.exe /c /nologo /W0 /WX- /diagnostics:classic /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
   CMakeCXXCompilerId.cpp
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCXXCompilerId.obj
-  CompilerIdCXX.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.13.0-rc1\CompilerIdCXX\.\CompilerIdCXX.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
+  CompilerIdCXX.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.12.4\CompilerIdCXX\.\CompilerIdCXX.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
   :VCEnd
-  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\Hostx86\x86\cl.exe
+  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\Hostx86\x64\cl.exe
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.13.0-rc1\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.12.4\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.25
+Time Elapsed 00:00:01.23
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
 
-The CXX compiler identification is MSVC, found in "C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/3.13.0-rc1/CompilerIdCXX/CompilerIdCXX.exe"
+The CXX compiler identification is MSVC, found in "C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/3.12.4/CompilerIdCXX/CompilerIdCXX.exe"
 
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_a5fd9.vcxproj" "/p:Configuration=Debug" "/p:Platform=Win32" "/p:VisualStudioVersion=15.0"
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_4c12d.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 11/10/2018 12:50:38 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_a5fd9.vcxproj" on node 1 (default targets).
+Build started 12/1/2018 3:13:49 PM.
+Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_4c12d.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_a5fd9.dir\Debug\".
+  Creating directory "cmTC_4c12d.dir\Debug\".
   Creating directory "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_a5fd9.dir\Debug\cmTC_a5fd9.tlog\".
+  Creating directory "cmTC_4c12d.dir\Debug\cmTC_4c12d.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_a5fd9.dir\Debug\cmTC_a5fd9.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_4c12d.dir\Debug\cmTC_4c12d.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a5fd9.dir\Debug\\" /Fd"cmTC_a5fd9.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\testCCompiler.c"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4c12d.dir\Debug\\" /Fd"cmTC_4c12d.dir\Debug\vc141.pdb" /Gd /TC /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\testCCompiler.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x64
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
   testCCompiler.c
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a5fd9.dir\Debug\\" /Fd"cmTC_a5fd9.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\testCCompiler.c"
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4c12d.dir\Debug\\" /Fd"cmTC_4c12d.dir\Debug\vc141.pdb" /Gd /TC /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\testCCompiler.c"
   
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_a5fd9.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_a5fd9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_a5fd9.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_a5fd9.dir\Debug\testCCompiler.obj
-  cmTC_a5fd9.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_a5fd9.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_4c12d.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_4c12d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_4c12d.lib" /MACHINE:X64  /machine:x64 cmTC_4c12d.dir\Debug\testCCompiler.obj
+  cmTC_4c12d.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_4c12d.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_a5fd9.dir\Debug\cmTC_a5fd9.tlog\unsuccessfulbuild".
-  Touching "cmTC_a5fd9.dir\Debug\cmTC_a5fd9.tlog\cmTC_a5fd9.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_a5fd9.vcxproj" (default targets).
+  Deleting file "cmTC_4c12d.dir\Debug\cmTC_4c12d.tlog\unsuccessfulbuild".
+  Touching "cmTC_4c12d.dir\Debug\cmTC_4c12d.tlog\cmTC_4c12d.lastbuildstate".
+Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_4c12d.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.56
+Time Elapsed 00:00:01.81
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_2a526.vcxproj" "/p:Configuration=Debug" "/p:Platform=Win32" "/p:VisualStudioVersion=15.0"
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_6a539.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 11/10/2018 12:50:40 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_2a526.vcxproj" on node 1 (default targets).
+Build started 12/1/2018 3:13:51 PM.
+Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_6a539.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_2a526.dir\Debug\".
+  Creating directory "cmTC_6a539.dir\Debug\".
   Creating directory "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_2a526.dir\Debug\cmTC_2a526.tlog\".
+  Creating directory "cmTC_6a539.dir\Debug\cmTC_6a539.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_2a526.dir\Debug\cmTC_2a526.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_6a539.dir\Debug\cmTC_6a539.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2a526.dir\Debug\\" /Fd"cmTC_2a526.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeCCompilerABI.c"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6a539.dir\Debug\\" /Fd"cmTC_6a539.dir\Debug\vc141.pdb" /Gd /TC /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x64
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
   CMakeCCompilerABI.c
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2a526.dir\Debug\\" /Fd"cmTC_2a526.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeCCompilerABI.c"
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6a539.dir\Debug\\" /Fd"cmTC_6a539.dir\Debug\vc141.pdb" /Gd /TC /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c"
   
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_2a526.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_2a526.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_2a526.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_2a526.dir\Debug\CMakeCCompilerABI.obj
-  cmTC_2a526.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_2a526.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_6a539.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_6a539.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_6a539.lib" /MACHINE:X64  /machine:x64 cmTC_6a539.dir\Debug\CMakeCCompilerABI.obj
+  cmTC_6a539.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_6a539.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_2a526.dir\Debug\cmTC_2a526.tlog\unsuccessfulbuild".
-  Touching "cmTC_2a526.dir\Debug\cmTC_2a526.tlog\cmTC_2a526.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_2a526.vcxproj" (default targets).
+  Deleting file "cmTC_6a539.dir\Debug\cmTC_6a539.tlog\unsuccessfulbuild".
+  Touching "cmTC_6a539.dir\Debug\cmTC_6a539.tlog\cmTC_6a539.lastbuildstate".
+Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_6a539.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.44
+Time Elapsed 00:00:01.42
 
 
 
@@ -170,39 +170,39 @@ Time Elapsed 00:00:01.44
 Detecting C [] compiler features compiled with the following output:
 Change Dir: C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_293e6.vcxproj" "/p:Configuration=Debug" "/p:Platform=Win32" "/p:VisualStudioVersion=15.0"
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_1f665.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 11/10/2018 12:50:42 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_293e6.vcxproj" on node 1 (default targets).
+Build started 12/1/2018 3:13:53 PM.
+Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_1f665.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_293e6.dir\Debug\".
+  Creating directory "cmTC_1f665.dir\Debug\".
   Creating directory "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_293e6.dir\Debug\cmTC_293e6.tlog\".
+  Creating directory "cmTC_1f665.dir\Debug\cmTC_1f665.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_293e6.dir\Debug\cmTC_293e6.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_1f665.dir\Debug\cmTC_1f665.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_293e6.dir\Debug\\" /Fd"cmTC_293e6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\feature_tests.c"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1f665.dir\Debug\\" /Fd"cmTC_1f665.dir\Debug\vc141.pdb" /Gd /TC /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\feature_tests.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x64
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
   feature_tests.c
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_293e6.dir\Debug\\" /Fd"cmTC_293e6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\feature_tests.c"
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1f665.dir\Debug\\" /Fd"cmTC_1f665.dir\Debug\vc141.pdb" /Gd /TC /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\feature_tests.c"
   
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_293e6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_293e6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_293e6.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_293e6.dir\Debug\feature_tests.obj
-  cmTC_293e6.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_293e6.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_1f665.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_1f665.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_1f665.lib" /MACHINE:X64  /machine:x64 cmTC_1f665.dir\Debug\feature_tests.obj
+  cmTC_1f665.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_1f665.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_293e6.dir\Debug\cmTC_293e6.tlog\unsuccessfulbuild".
-  Touching "cmTC_293e6.dir\Debug\cmTC_293e6.tlog\cmTC_293e6.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_293e6.vcxproj" (default targets).
+  Deleting file "cmTC_1f665.dir\Debug\cmTC_1f665.tlog\unsuccessfulbuild".
+  Touching "cmTC_1f665.dir\Debug\cmTC_1f665.tlog\cmTC_1f665.lastbuildstate".
+Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_1f665.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.44
+Time Elapsed 00:00:01.58
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -210,77 +210,77 @@ Time Elapsed 00:00:01.44
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_67931.vcxproj" "/p:Configuration=Debug" "/p:Platform=Win32" "/p:VisualStudioVersion=15.0"
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_24b86.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 11/10/2018 12:50:43 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_67931.vcxproj" on node 1 (default targets).
+Build started 12/1/2018 3:13:55 PM.
+Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_24b86.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_67931.dir\Debug\".
+  Creating directory "cmTC_24b86.dir\Debug\".
   Creating directory "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_67931.dir\Debug\cmTC_67931.tlog\".
+  Creating directory "cmTC_24b86.dir\Debug\cmTC_24b86.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_67931.dir\Debug\cmTC_67931.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_24b86.dir\Debug\cmTC_24b86.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_67931.dir\Debug\\" /Fd"cmTC_67931.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_24b86.dir\Debug\\" /Fd"cmTC_24b86.dir\Debug\vc141.pdb" /Gd /TP /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x64
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_67931.dir\Debug\\" /Fd"cmTC_67931.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
-  
   testCXXCompiler.cxx
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_24b86.dir\Debug\\" /Fd"cmTC_24b86.dir\Debug\vc141.pdb" /Gd /TP /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_67931.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_67931.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_67931.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_67931.dir\Debug\testCXXCompiler.obj
-  cmTC_67931.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_67931.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_24b86.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_24b86.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_24b86.lib" /MACHINE:X64  /machine:x64 cmTC_24b86.dir\Debug\testCXXCompiler.obj
+  cmTC_24b86.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_24b86.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_67931.dir\Debug\cmTC_67931.tlog\unsuccessfulbuild".
-  Touching "cmTC_67931.dir\Debug\cmTC_67931.tlog\cmTC_67931.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_67931.vcxproj" (default targets).
+  Deleting file "cmTC_24b86.dir\Debug\cmTC_24b86.tlog\unsuccessfulbuild".
+  Touching "cmTC_24b86.dir\Debug\cmTC_24b86.tlog\cmTC_24b86.lastbuildstate".
+Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_24b86.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.55
+Time Elapsed 00:00:01.64
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_a180a.vcxproj" "/p:Configuration=Debug" "/p:Platform=Win32" "/p:VisualStudioVersion=15.0"
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_226fb.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 11/10/2018 12:50:45 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_a180a.vcxproj" on node 1 (default targets).
+Build started 12/1/2018 3:13:57 PM.
+Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_226fb.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_a180a.dir\Debug\".
+  Creating directory "cmTC_226fb.dir\Debug\".
   Creating directory "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_a180a.dir\Debug\cmTC_a180a.tlog\".
+  Creating directory "cmTC_226fb.dir\Debug\cmTC_226fb.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_a180a.dir\Debug\cmTC_a180a.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_226fb.dir\Debug\cmTC_226fb.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_a180a.dir\Debug\\" /Fd"cmTC_a180a.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeCXXCompilerABI.cpp"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_226fb.dir\Debug\\" /Fd"cmTC_226fb.dir\Debug\vc141.pdb" /Gd /TP /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x64
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
   CMakeCXXCompilerABI.cpp
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_a180a.dir\Debug\\" /Fd"cmTC_a180a.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.13\Modules\CMakeCXXCompilerABI.cpp"
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_226fb.dir\Debug\\" /Fd"cmTC_226fb.dir\Debug\vc141.pdb" /Gd /TP /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp"
   
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_a180a.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_a180a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_a180a.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_a180a.dir\Debug\CMakeCXXCompilerABI.obj
-  cmTC_a180a.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_a180a.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_226fb.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_226fb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_226fb.lib" /MACHINE:X64  /machine:x64 cmTC_226fb.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTC_226fb.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_226fb.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_a180a.dir\Debug\cmTC_a180a.tlog\unsuccessfulbuild".
-  Touching "cmTC_a180a.dir\Debug\cmTC_a180a.tlog\cmTC_a180a.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_a180a.vcxproj" (default targets).
+  Deleting file "cmTC_226fb.dir\Debug\cmTC_226fb.tlog\unsuccessfulbuild".
+  Touching "cmTC_226fb.dir\Debug\cmTC_226fb.tlog\cmTC_226fb.lastbuildstate".
+Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_226fb.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.40
+Time Elapsed 00:00:01.53
 
 
 
@@ -288,39 +288,39 @@ Time Elapsed 00:00:01.40
 Detecting CXX [] compiler features compiled with the following output:
 Change Dir: C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_fa9b4.vcxproj" "/p:Configuration=Debug" "/p:Platform=Win32" "/p:VisualStudioVersion=15.0"
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_71fae.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 11/10/2018 12:50:47 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_fa9b4.vcxproj" on node 1 (default targets).
+Build started 12/1/2018 3:13:59 PM.
+Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_71fae.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_fa9b4.dir\Debug\".
+  Creating directory "cmTC_71fae.dir\Debug\".
   Creating directory "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_fa9b4.dir\Debug\cmTC_fa9b4.tlog\".
+  Creating directory "cmTC_71fae.dir\Debug\cmTC_71fae.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_fa9b4.dir\Debug\cmTC_fa9b4.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_71fae.dir\Debug\cmTC_71fae.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_fa9b4.dir\Debug\\" /Fd"cmTC_fa9b4.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\feature_tests.cxx"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_71fae.dir\Debug\\" /Fd"cmTC_71fae.dir\Debug\vc141.pdb" /Gd /TP /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\feature_tests.cxx"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x64
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
   feature_tests.cxx
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_fa9b4.dir\Debug\\" /Fd"cmTC_fa9b4.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\feature_tests.cxx"
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_71fae.dir\Debug\\" /Fd"cmTC_71fae.dir\Debug\vc141.pdb" /Gd /TP /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\feature_tests.cxx"
   
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_fa9b4.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_fa9b4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_fa9b4.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_fa9b4.dir\Debug\feature_tests.obj
-  cmTC_fa9b4.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_fa9b4.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_71fae.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_71fae.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_71fae.lib" /MACHINE:X64  /machine:x64 cmTC_71fae.dir\Debug\feature_tests.obj
+  cmTC_71fae.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_71fae.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_fa9b4.dir\Debug\cmTC_fa9b4.tlog\unsuccessfulbuild".
-  Touching "cmTC_fa9b4.dir\Debug\cmTC_fa9b4.tlog\cmTC_fa9b4.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_fa9b4.vcxproj" (default targets).
+  Deleting file "cmTC_71fae.dir\Debug\cmTC_71fae.tlog\unsuccessfulbuild".
+  Touching "cmTC_71fae.dir\Debug\cmTC_71fae.tlog\cmTC_71fae.lastbuildstate".
+Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_71fae.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.39
+Time Elapsed 00:00:01.48
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -382,163 +382,33 @@ Time Elapsed 00:00:01.39
 Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeeded with the following output:
 Change Dir: C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_8a1c5.vcxproj" "/p:Configuration=Debug" "/p:Platform=Win32" "/p:VisualStudioVersion=15.0"
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_c927b.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 11/10/2018 12:50:55 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_8a1c5.vcxproj" on node 1 (default targets).
+Build started 12/1/2018 3:14:07 PM.
+Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_c927b.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_8a1c5.dir\Debug\".
+  Creating directory "cmTC_c927b.dir\Debug\".
   Creating directory "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_8a1c5.dir\Debug\cmTC_8a1c5.tlog\".
+  Creating directory "cmTC_c927b.dir\Debug\cmTC_c927b.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_8a1c5.dir\Debug\cmTC_8a1c5.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_c927b.dir\Debug\cmTC_c927b.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D COMPILER_SUPPORTS_CXX11 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_8a1c5.dir\Debug\\" /Fd"cmTC_8a1c5.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\src.cxx"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D COMPILER_SUPPORTS_CXX11 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c927b.dir\Debug\\" /Fd"cmTC_c927b.dir\Debug\vc141.pdb" /Gd /TP /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\src.cxx"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x64
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
   src.cxx
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D COMPILER_SUPPORTS_CXX11 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_8a1c5.dir\Debug\\" /Fd"cmTC_8a1c5.dir\Debug\vc141.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\src.cxx"
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /D WIN32 /D _WINDOWS /D COMPILER_SUPPORTS_CXX11 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c927b.dir\Debug\\" /Fd"cmTC_c927b.dir\Debug\vc141.pdb" /Gd /TP /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\src.cxx"
   
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_8a1c5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_8a1c5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_8a1c5.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_8a1c5.dir\Debug\src.obj
-  cmTC_8a1c5.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_8a1c5.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_c927b.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_c927b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_c927b.lib" /MACHINE:X64  /machine:x64 cmTC_c927b.dir\Debug\src.obj
+  cmTC_c927b.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_c927b.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_8a1c5.dir\Debug\cmTC_8a1c5.tlog\unsuccessfulbuild".
-  Touching "cmTC_8a1c5.dir\Debug\cmTC_8a1c5.tlog\cmTC_8a1c5.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_8a1c5.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:01.41
-
-Source file was:
-int main() { return 0; }
-The system is: Windows - 10.0.17134 - AMD64
-Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler:  
-Build flags: /DWIN32;/D_WINDOWS;/W3
-Id flags:  
-
-The output was:
-0
-Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 11/10/2018 2:06:33 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.12.4\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "Debug\".
-  Creating directory "Debug\CompilerIdC.tlog\".
-InitializeBuildStatus:
-  Creating "Debug\CompilerIdC.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /nologo /W0 /WX- /diagnostics:classic /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue CMakeCCompilerId.c
-  CMakeCCompilerId.c
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
-  CompilerIdC.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.12.4\CompilerIdC\.\CompilerIdC.exe
-PostBuildEvent:
-  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
-  :VCEnd
-  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\Hostx86\x86\cl.exe
-FinalizeBuildStatus:
-  Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
-  Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.12.4\CompilerIdC\CompilerIdC.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:01.95
-
-
-Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
-
-Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
-
-The C compiler identification is MSVC, found in "C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/3.12.4/CompilerIdC/CompilerIdC.exe"
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler:  
-Build flags: /DWIN32;/D_WINDOWS;/W3;/GR;/EHsc
-Id flags:  
-
-The output was:
-0
-Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 11/10/2018 2:06:35 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.12.4\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "Debug\".
-  Creating directory "Debug\CompilerIdCXX.tlog\".
-InitializeBuildStatus:
-  Creating "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /nologo /W0 /WX- /diagnostics:classic /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue CMakeCXXCompilerId.cpp
-  CMakeCXXCompilerId.cpp
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCXXCompilerId.obj
-  CompilerIdCXX.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.12.4\CompilerIdCXX\.\CompilerIdCXX.exe
-PostBuildEvent:
-  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
-  :VCEnd
-  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\Hostx86\x86\cl.exe
-FinalizeBuildStatus:
-  Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
-  Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\3.12.4\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:01.28
-
-
-Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
-
-Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
-
-The CXX compiler identification is MSVC, found in "C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/3.12.4/CompilerIdCXX/CompilerIdCXX.exe"
-
-Determining if the C compiler works passed with the following output:
-Change Dir: C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_e32ec.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
-Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 11/10/2018 2:06:37 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_e32ec.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_e32ec.dir\Debug\".
-  Creating directory "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_e32ec.dir\Debug\cmTC_e32ec.tlog\".
-InitializeBuildStatus:
-  Creating "cmTC_e32ec.dir\Debug\cmTC_e32ec.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e32ec.dir\Debug\\" /Fd"cmTC_e32ec.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\testCCompiler.c"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  
-  testCCompiler.c
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e32ec.dir\Debug\\" /Fd"cmTC_e32ec.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\testCCompiler.c"
-  
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_e32ec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_e32ec.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_e32ec.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_e32ec.dir\Debug\testCCompiler.obj
-  cmTC_e32ec.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_e32ec.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_e32ec.dir\Debug\cmTC_e32ec.tlog\unsuccessfulbuild".
-  Touching "cmTC_e32ec.dir\Debug\cmTC_e32ec.tlog\cmTC_e32ec.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_e32ec.vcxproj" (default targets).
+  Deleting file "cmTC_c927b.dir\Debug\cmTC_c927b.tlog\unsuccessfulbuild".
+  Touching "cmTC_c927b.dir\Debug\cmTC_c927b.tlog\cmTC_c927b.lastbuildstate".
+Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_c927b.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
@@ -546,256 +416,5 @@ Build succeeded.
 
 Time Elapsed 00:00:01.62
 
-
-Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_14f69.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
-Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 11/10/2018 2:06:39 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_14f69.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_14f69.dir\Debug\".
-  Creating directory "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_14f69.dir\Debug\cmTC_14f69.tlog\".
-InitializeBuildStatus:
-  Creating "cmTC_14f69.dir\Debug\cmTC_14f69.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_14f69.dir\Debug\\" /Fd"cmTC_14f69.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  
-  CMakeCCompilerABI.c
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_14f69.dir\Debug\\" /Fd"cmTC_14f69.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c"
-  
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_14f69.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_14f69.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_14f69.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_14f69.dir\Debug\CMakeCCompilerABI.obj
-  cmTC_14f69.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_14f69.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_14f69.dir\Debug\cmTC_14f69.tlog\unsuccessfulbuild".
-  Touching "cmTC_14f69.dir\Debug\cmTC_14f69.tlog\cmTC_14f69.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_14f69.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:01.41
-
-
-
-
-Detecting C [] compiler features compiled with the following output:
-Change Dir: C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_30a77.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
-Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 11/10/2018 2:06:41 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_30a77.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_30a77.dir\Debug\".
-  Creating directory "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_30a77.dir\Debug\cmTC_30a77.tlog\".
-InitializeBuildStatus:
-  Creating "cmTC_30a77.dir\Debug\cmTC_30a77.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_30a77.dir\Debug\\" /Fd"cmTC_30a77.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\feature_tests.c"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  
-  feature_tests.c
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_30a77.dir\Debug\\" /Fd"cmTC_30a77.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\feature_tests.c"
-  
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_30a77.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_30a77.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_30a77.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_30a77.dir\Debug\feature_tests.obj
-  cmTC_30a77.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_30a77.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_30a77.dir\Debug\cmTC_30a77.tlog\unsuccessfulbuild".
-  Touching "cmTC_30a77.dir\Debug\cmTC_30a77.tlog\cmTC_30a77.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_30a77.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:01.42
-
-
-    Feature record: C_FEATURE:1c_function_prototypes
-    Feature record: C_FEATURE:1c_variadic_macros
-Determining if the CXX compiler works passed with the following output:
-Change Dir: C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_36712.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
-Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 11/10/2018 2:06:43 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_36712.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_36712.dir\Debug\".
-  Creating directory "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_36712.dir\Debug\cmTC_36712.tlog\".
-InitializeBuildStatus:
-  Creating "cmTC_36712.dir\Debug\cmTC_36712.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_36712.dir\Debug\\" /Fd"cmTC_36712.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  
-  testCXXCompiler.cxx
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_36712.dir\Debug\\" /Fd"cmTC_36712.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
-  
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_36712.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_36712.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_36712.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_36712.dir\Debug\testCXXCompiler.obj
-  cmTC_36712.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_36712.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_36712.dir\Debug\cmTC_36712.tlog\unsuccessfulbuild".
-  Touching "cmTC_36712.dir\Debug\cmTC_36712.tlog\cmTC_36712.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_36712.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:01.53
-
-
-Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_f72b9.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
-Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 11/10/2018 2:06:45 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_f72b9.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_f72b9.dir\Debug\".
-  Creating directory "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_f72b9.dir\Debug\cmTC_f72b9.tlog\".
-InitializeBuildStatus:
-  Creating "cmTC_f72b9.dir\Debug\cmTC_f72b9.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f72b9.dir\Debug\\" /Fd"cmTC_f72b9.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  
-  CMakeCXXCompilerABI.cpp
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f72b9.dir\Debug\\" /Fd"cmTC_f72b9.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp"
-  
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_f72b9.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_f72b9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_f72b9.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_f72b9.dir\Debug\CMakeCXXCompilerABI.obj
-  cmTC_f72b9.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_f72b9.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_f72b9.dir\Debug\cmTC_f72b9.tlog\unsuccessfulbuild".
-  Touching "cmTC_f72b9.dir\Debug\cmTC_f72b9.tlog\cmTC_f72b9.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_f72b9.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:01.48
-
-
-
-
-Detecting CXX [] compiler features compiled with the following output:
-Change Dir: C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_059de.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
-Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 11/10/2018 2:06:47 PM.
-Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_059de.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_059de.dir\Debug\".
-  Creating directory "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_059de.dir\Debug\cmTC_059de.tlog\".
-InitializeBuildStatus:
-  Creating "cmTC_059de.dir\Debug\cmTC_059de.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_059de.dir\Debug\\" /Fd"cmTC_059de.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\feature_tests.cxx"
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26730 for x86
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  
-  feature_tests.cxx
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_059de.dir\Debug\\" /Fd"cmTC_059de.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\feature_tests.cxx"
-  
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_059de.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_059de.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/build/1-granular_synth/Release/CMakeFiles/CMakeTmp/Debug/cmTC_059de.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_059de.dir\Debug\feature_tests.obj
-  cmTC_059de.vcxproj -> C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\Debug\cmTC_059de.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_059de.dir\Debug\cmTC_059de.tlog\unsuccessfulbuild".
-  Touching "cmTC_059de.dir\Debug\cmTC_059de.tlog\cmTC_059de.lastbuildstate".
-Done Building Project "C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\1-granular_synth\Release\CMakeFiles\CMakeTmp\cmTC_059de.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:01.50
-
-
-    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
-    Feature record: CXX_FEATURE:1cxx_alias_templates
-    Feature record: CXX_FEATURE:1cxx_alignas
-    Feature record: CXX_FEATURE:1cxx_alignof
-    Feature record: CXX_FEATURE:1cxx_attributes
-    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
-    Feature record: CXX_FEATURE:1cxx_auto_type
-    Feature record: CXX_FEATURE:1cxx_binary_literals
-    Feature record: CXX_FEATURE:1cxx_constexpr
-    Feature record: CXX_FEATURE:1cxx_contextual_conversions
-    Feature record: CXX_FEATURE:1cxx_decltype
-    Feature record: CXX_FEATURE:1cxx_decltype_auto
-    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
-    Feature record: CXX_FEATURE:1cxx_default_function_template_args
-    Feature record: CXX_FEATURE:1cxx_defaulted_functions
-    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
-    Feature record: CXX_FEATURE:1cxx_delegating_constructors
-    Feature record: CXX_FEATURE:1cxx_deleted_functions
-    Feature record: CXX_FEATURE:1cxx_digit_separators
-    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
-    Feature record: CXX_FEATURE:1cxx_explicit_conversions
-    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
-    Feature record: CXX_FEATURE:1cxx_extern_templates
-    Feature record: CXX_FEATURE:1cxx_final
-    Feature record: CXX_FEATURE:1cxx_func_identifier
-    Feature record: CXX_FEATURE:1cxx_generalized_initializers
-    Feature record: CXX_FEATURE:1cxx_generic_lambdas
-    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
-    Feature record: CXX_FEATURE:1cxx_inline_namespaces
-    Feature record: CXX_FEATURE:1cxx_lambdas
-    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
-    Feature record: CXX_FEATURE:1cxx_local_type_template_args
-    Feature record: CXX_FEATURE:1cxx_long_long_type
-    Feature record: CXX_FEATURE:1cxx_noexcept
-    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
-    Feature record: CXX_FEATURE:1cxx_nullptr
-    Feature record: CXX_FEATURE:1cxx_override
-    Feature record: CXX_FEATURE:1cxx_range_for
-    Feature record: CXX_FEATURE:1cxx_raw_string_literals
-    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:1cxx_return_type_deduction
-    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
-    Feature record: CXX_FEATURE:1cxx_rvalue_references
-    Feature record: CXX_FEATURE:1cxx_sizeof_member
-    Feature record: CXX_FEATURE:1cxx_static_assert
-    Feature record: CXX_FEATURE:1cxx_strong_enums
-    Feature record: CXX_FEATURE:1cxx_template_template_parameters
-    Feature record: CXX_FEATURE:1cxx_thread_local
-    Feature record: CXX_FEATURE:1cxx_trailing_return_types
-    Feature record: CXX_FEATURE:1cxx_unicode_literals
-    Feature record: CXX_FEATURE:1cxx_uniform_initialization
-    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
-    Feature record: CXX_FEATURE:1cxx_user_literals
-    Feature record: CXX_FEATURE:1cxx_variable_templates
-    Feature record: CXX_FEATURE:1cxx_variadic_macros
-    Feature record: CXX_FEATURE:1cxx_variadic_templates
+Source file was:
+int main() { return 0; }

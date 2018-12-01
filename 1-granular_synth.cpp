@@ -15,6 +15,7 @@ using namespace gam;
 
 #include "al/core.hpp"
 #include "al/util/imgui/al_Imgui.hpp"
+#include "al/util/ui/al_ControlGUI.hpp"
 #include "al/util/ui/al_Parameter.hpp"
 using namespace al;
 using namespace osc;
@@ -103,7 +104,7 @@ struct Granulator {
     g.source = soundClip[whichClip];
 
     //startTime and endTime are in units of sample 
-    float startTime = g.source->size * startPosition* rnd::uniformi(1.0,startRandomRange); //how to put var in here
+    float startTime = g.source->size * startPosition; // rnd::uniformi(1.0,startRandomRange); //how to put var in here
     float endTime = startTime + grainDuration * ::SAMPLE_RATE;
     float t = pow(2.0, playbackRate) * grainDuration * ::SAMPLE_RATE;
     startTime -= t/2;  //ask Karl about these two lines
@@ -146,7 +147,7 @@ struct Granulator {
 
 };
 
-Parameter Y {"location", "vSliders/3", 0.0, "quneo", -1.0f, 1.0f};
+ParameterInt Y {"location", "vSliders/3", 0, "quneo", -1, 1};
 
 
 struct MyApp : public App {

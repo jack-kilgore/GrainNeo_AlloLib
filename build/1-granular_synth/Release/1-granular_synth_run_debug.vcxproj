@@ -53,7 +53,7 @@
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-robocopy "C:/Program Files (x86)/Mega-Nerd/libsndfile/lib/../bin" C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/bin libsndfile-1.dll &amp; IF %ERRORLEVEL% LEQ 1 exit 0
+robocopy "C:/Program Files/Mega-Nerd/libsndfile/lib/../bin" C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/bin libsndfile-1.dll &amp; IF %ERRORLEVEL% LEQ 1 exit 0
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -75,7 +75,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-robocopy "C:/Program Files (x86)/Mega-Nerd/libsndfile/lib/../bin" C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/bin libsndfile-1.dll &amp; IF %ERRORLEVEL% LEQ 1 exit 0
+robocopy "C:/Program Files/Mega-Nerd/libsndfile/lib/../bin" C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/GrainNeo_AlloLib/bin libsndfile-1.dll &amp; IF %ERRORLEVEL% LEQ 1 exit 0
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

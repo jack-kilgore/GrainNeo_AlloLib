@@ -93,7 +93,7 @@ CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=/MD /Zi /O2 /Ob1 /DNDEBUG
 CMAKE_C_STANDARD_LIBRARIES:STRING=kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
 
 //Flags used by the linker during all build types.
-CMAKE_EXE_LINKER_FLAGS:STRING=/machine:X86
+CMAKE_EXE_LINKER_FLAGS:STRING=/machine:x64
 
 //Flags used by the linker during DEBUG builds.
 CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=/debug /INCREMENTAL
@@ -162,11 +162,11 @@ CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
 CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/VC/Tools/MSVC/14.15.26726/bin/Hostx86/x86/link.exe
+CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/VC/Tools/MSVC/14.15.26726/bin/Hostx86/x64/link.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
-CMAKE_MODULE_LINKER_FLAGS:STRING=/machine:X86
+CMAKE_MODULE_LINKER_FLAGS:STRING=/machine:x64
 
 //Flags used by the linker during the creation of modules during
 // DEBUG builds.
@@ -183,12 +183,6 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 //Flags used by the linker during the creation of modules during
 // RELWITHDEBINFO builds.
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
-
-//Value Computed by CMake
-CMAKE_PROJECT_DESCRIPTION:STATIC=
-
-//Value Computed by CMake
-CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=Project
@@ -213,7 +207,7 @@ CMAKE_RC_FLAGS_RELWITHDEBINFO:STRING=
 
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
-CMAKE_SHARED_LINKER_FLAGS:STRING=/machine:X86
+CMAKE_SHARED_LINKER_FLAGS:STRING=/machine:x64
 
 //Flags used by the linker during the creation of shared libraries
 // during DEBUG builds.
@@ -240,7 +234,7 @@ CMAKE_SKIP_RPATH:BOOL=NO
 
 //Flags used by the linker during the creation of static libraries
 // during all build types.
-CMAKE_STATIC_LINKER_FLAGS:STRING=/machine:X86
+CMAKE_STATIC_LINKER_FLAGS:STRING=/machine:x64
 
 //Flags used by the linker during the creation of static libraries
 // during DEBUG builds.
@@ -313,7 +307,7 @@ GLFW_VULKAN_STATIC:BOOL=OFF
 Gamma_BINARY_DIR:STATIC=C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/AlloLib/build/Gamma
 
 //Dependencies for the target
-Gamma_LIB_DEPENDS:STATIC=general;C:/Program Files (x86)/Mega-Nerd/libsndfile/lib/libsndfile-1.lib;
+Gamma_LIB_DEPENDS:STATIC=general;C:/Program Files/Mega-Nerd/libsndfile/lib/libsndfile-1.lib;
 
 //Value Computed by CMake
 Gamma_SOURCE_DIR:STATIC=C:/Users/Jackalaka/Documents/education/2018_fall_quarter/mat240c/AlloLib/external/Gamma
@@ -409,10 +403,10 @@ Project_SOURCE_DIR:STATIC=C:/Users/Jackalaka/Documents/education/2018_fall_quart
 RtAudioLinuxAPI:STRING=alsa
 
 //Path to a file.
-SNDFILE_INCLUDE_DIR:PATH=C:/Program Files (x86)/Mega-Nerd/libsndfile/include
+SNDFILE_INCLUDE_DIR:PATH=C:/Program Files/Mega-Nerd/libsndfile/include
 
 //Path to a library.
-SNDFILE_LIBRARY:FILEPATH=C:/Program Files (x86)/Mega-Nerd/libsndfile/lib/libsndfile-1.lib
+SNDFILE_LIBRARY:FILEPATH=C:/Program Files/Mega-Nerd/libsndfile/lib/libsndfile-1.lib
 
 TRAVIS_BUILD:BOOL=OFF
 
