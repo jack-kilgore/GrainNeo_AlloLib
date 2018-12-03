@@ -91,6 +91,7 @@ struct Granulator {
   int activeGrainCount = 0;
 ///quneo/upButton/0/note_velocity
   //tweakable parameters 
+  /*
     ParameterInt whichClip{"note_velocity", "upButton/0", 0, "quneo", 0, 8};
     //ParameterInt whichClip{"note_velocity", "downButton/0", 0, "quneo", 0, 8};
     //(0, source.size())
@@ -102,6 +103,17 @@ struct Granulator {
     ParameterInt playbackRate{"location", "vSliders/3", 0.0, "quneo", 0, 127};
     Parameter birthRate{"/frequency", "", 55, "", 0, 200};
     ParameterInt PositionRandRange{"location", "hSliders/3", 0, "quneo", 0, 127};
+  */
+
+  int whichClip = 0;   //(0, source.size())
+  float grainDuration = 0.01; //in seconds 
+  float startPosition = 0.25; // (0,1)
+  float peakPosition = 0.1;   // (0,1)
+  float amplitudePeak = 0.9;  // (0,1)
+  float playbackRate = 0;     // (-1,1)
+  float PositionRandRange = 1.1;
+  float panPosition = 0.5;
+  float birthRate = 55;
 
 
   //this governs the rate at which grains are created 
@@ -113,15 +125,15 @@ struct Granulator {
     // choose which sound clip this grain pulls from
     g.source = soundClip[whichClip];
     // startTime and endTime are in units of sample
-    float startTime = g.source->size * startPosition/127.0 * rnd::uniform(1.0,(PositionRandRange/127.0 + 1.1));
+    float startTime = g.source->size * startPosition * rnd::uniform(1.0,PositionRandRange/1.0);
     float endTime =
-        startTime + (grainDuration/127.0) * ::SAMPLE_RATE * powf(2.0, playbackRate/127.0);
+        startTime + grainDuration * ::SAMPLE_RATE * powf(2.0, playbackRate);
 
-    g.index.set(startTime, endTime, (grainDuration/127.0));
+    g.index.set(startTime, endTime, grainDuration);
 
     // riseTime and fallTime are in units of second
-    float riseTime = (grainDuration/127.0) * peakPosition;
-    float fallTime = ((grainDuration/127.0)) - riseTime;
+    float riseTime = (grainDuration) * peakPosition;
+    float fallTime = (grainDuration) - riseTime;
     g.envelope.set(riseTime, fallTime, amplitudePeak);
 
     g.pan = panPosition;
@@ -173,6 +185,7 @@ struct MyApp : public App {
    Recv server;
 
   void onCreate() override {
+    initIMGUI();
     parameterServer().print();
     
     granulator.load("0.wav");
@@ -182,13 +195,14 @@ struct MyApp : public App {
     granulator.load("4.wav");
     granulator.load("panlinespoonDrop.aiff");
 
-   // server.open(9020,"localhost",0.05);
-    //server.handler(*this);
-    //server.start();
-    //ParameterServer() << Y;
+    server.open(9020,"localhost",0.05);
+    server.handler(*this);
+    server.start();
     parameterServer().addListener("127.0.0.1", 9020);
 
-    gui.init();
+
+
+    /*gui.init();
     gui << granulator.whichClip << granulator.grainDuration
         << granulator.startPosition << granulator.peakPosition
         << granulator.amplitudePeak << granulator.panPosition
@@ -200,18 +214,41 @@ struct MyApp : public App {
                       << granulator.amplitudePeak << granulator.panPosition
                       << granulator.playbackRate << granulator.birthRate
                       << granulator.PositionRandRange;
+                      */
     
   }
 
   void onAnimate(double dt) override {
     // pass show_gui for use_input param to turn off interactions
     // when not showing gui
+    beginIMGUI_minimal(show_gui);
     navControl().active(!gui.usingInput());
   }
 
   void onDraw(Graphics& g) override {
     g.clear(background);
-    gui.draw(g);
+
+    ImGui::Text("Active Grains: %3d", granulator.activeGrainCount);
+    ImGui::SliderFloat("Background", &background, 0, 1);
+
+    ImGui::SliderInt("Sound Clip", &granulator.whichClip, 0, 5);
+    ImGui::SliderFloat("Start Position", &granulator.startPosition, 0.0, 1.0);
+    ImGui::SliderFloat("Playback Rate", &granulator.playbackRate, -5, 5);
+    ImGui::SliderFloat("Start Positon Randomness", &granulator.PositionRandRange,1, 2);
+
+    static float volume = -7;
+    ImGui::SliderFloat("Loudness", &granulator.amplitudePeak, 0.0, 1.0);
+    //granulator.amplitudePeak = dbtoa(volume);
+    
+    ImGui::SliderFloat("Envelop Parameter", &granulator.peakPosition, 0, 1);
+    ImGui::SliderFloat("Grain Duration", &granulator.grainDuration, 0.001, 3.0);
+
+    static float midi = 10;
+    ImGui::SliderFloat("Birth Frequency", &midi, -16, 85);
+    granulator.grainBirth.frequency(mtof(midi));
+
+    endIMGUI_minimal(show_gui);
+    //gui.draw(g);
   }
 
   void onSound(AudioIOData& io) override {
@@ -231,31 +268,64 @@ struct MyApp : public App {
 //look at interaction tutorial by Andres
   // PARAMETER class 
     //look into how to fit the below name space of QuNeo into 
-    // Parameter p {"name", "group", 0.0, "prefix", -1.0f, 1.0f}
+    // map certain positions on the pads 
   void onMessage(osc::Message& m) override {
     m.print();
+    if(m.addressPattern() == "/quneo/vSliders/0/location")
+    {
+      int val;
+      m >> val;
+      float v = (val/127.0f);
+      if(v < 0.001) v = 0.001;
+      //cout << "Loudness: "<< v << endl;
+      granulator.amplitudePeak = v;
+    }
     if(m.addressPattern() == "/quneo/vSliders/3/location")
+    {
+      int val;
+      m >> val;
+      float v = (val/127.0f)+1.0;
+      
+      //cout << "PositionRandRange: "<< v << endl;
+      granulator.PositionRandRange = v;
+    }
+     if(m.addressPattern() == "/quneo/vSliders/2/location")
+    {
+      int val;
+      m >> val;
+      float v = val/1.0;
+     // cout << "grainBirth " << v << endl;
+      granulator.grainBirth.frequency(mtof(v));
+    }
+    if(m.addressPattern() == "/quneo/hSliders/3/location")
+    {
+      int val;
+      m >> val;
+      float v = (10*((val/127.0f))-5);
+      //if(v < 0.001) v = 0.001;
+      //cout << "Loudness: "<< v << endl;
+      granulator.playbackRate = v;
+    }
+    if(m.addressPattern() == "/quneo/vSliders/1/location")
     {
 		int val;
 		m >> val;
-    float v = (val/127.0f)*3;
-    if(v < 0.0001) v = 0.0001;
-      //cout << "vSlider3 Location: "<< v << endl;
-      //granulator.grainDuration = v;
+    float v = (val/127.0f);
+    if(v < 0.001) v = 0.001;
+      //cout << "Grain_Duration: "<< v << endl;
+      granulator.grainDuration = v;
 
     }
-    if(m.addressPattern() == "/quneo/longSlider/width")
+    if(m.addressPattern() == "/quneo/longSlider/location")
     {
       int val;
       m >> val;
-      cout << "longSlider Width: "<< val << endl;
+      float v = (val/127.0f); 
+      //cout << "startPosition: "<< v << endl;
+      granulator.startPosition = v;
+
     }
-    if(m.addressPattern() == "/quneo/pads/3/drum/pressure")
-    {
-      int val;
-      m >> val;
-      cout << "drumPad Pressure: "<< val << endl;
-    }
+    
 
   }
 
