@@ -34,10 +34,6 @@ const int BLOCK_SIZE = 512;
 const int OUTPUT_CHANNELS = 2;
 const int INPUT_CHANNELS = 2;
 
-struct FloatPair {
-  float l, r;
-};
-
 struct Granulator {
 
   void load(string fileName){
@@ -69,7 +65,6 @@ struct Granulator {
     Line index;
     AttackDecay envelope;
     bool active = false;
-    float pan;
 
     float operator()(){
       float f = envelope() * source->get(index());
@@ -89,136 +84,132 @@ struct Granulator {
   }
 
   int activeGrainCount = 0;
-///quneo/upButton/0/note_velocity
-  //tweakable parameters 
-    ParameterInt whichClip{"note_velocity", "upButton/0", 0, "quneo", 0, 8};
-    //ParameterInt whichClip{"note_velocity", "downButton/0", 0, "quneo", 0, 8};
-    //(0, source.size())
-    ParameterInt grainDuration{"width", "longSlider", 60, "quneo", 0, 127};
-    ParameterInt startPosition{"location", "longSlider", 60, "quneo", 0, 127};
-    Parameter peakPosition{"/envelope", "", 0.1, "", 0.0, 1.0};
-    Parameter amplitudePeak{"/amplitude", "", 0.707, "", 0.0, 1.0};
-    Parameter panPosition{"/pan", "", 0.5, "", 0.0, 1.0};
-    ParameterInt playbackRate{"location", "vSliders/3", 0.0, "quneo", 0, 127};
-    Parameter birthRate{"/frequency", "", 55, "", 0, 200};
-    ParameterInt PositionRandRange{"location", "hSliders/3", 0, "quneo", 0, 127};
 
+  //tweakable parameters 
+  int whichClip = 0;   //(0, source.size())
+  float grainDuration = 0.25; //in seconds 
+  float startPosition = 0.25; // (0,1)
+  float peakPosition = 0.1;   // (0,1)
+  float amplitudePeak = 0.9;  // (0,1)
+  float playbackRate = 0;     // (-1,1)
+  float startRandomRange = 1.0;
 
   //this governs the rate at which grains are created 
   Edge grainBirth; 
 
   //this method makes a new grain out of a dead/inactive one. 
   // 
-  void recycle(Grain& g) {
-    // choose which sound clip this grain pulls from
+  void recycle(Grain& g){
+    //choose sound clip the grain pulls from 
     g.source = soundClip[whichClip];
-    // startTime and endTime are in units of sample
-    float startTime = g.source->size * startPosition/127.0 * rnd::uniform(1.0,(PositionRandRange/127.0 + 1.1));
-    float endTime =
-        startTime + (grainDuration/127.0) * ::SAMPLE_RATE * powf(2.0, playbackRate/127.0);
 
-    g.index.set(startTime, endTime, (grainDuration/127.0));
+    //startTime and endTime are in units of sample 
+    float startTime = g.source->size * startPosition; // rnd::uniformi(1.0,startRandomRange); //how to put var in here
+    float endTime = startTime + grainDuration * ::SAMPLE_RATE;
+    float t = pow(2.0, playbackRate) * grainDuration * ::SAMPLE_RATE;
+    startTime -= t/2;  //ask Karl about these two lines
+    endTime =+ t/2;
+    g.index.set(startTime, endTime, grainDuration); //index refers to the line fn within grain 
 
-    // riseTime and fallTime are in units of second
-    float riseTime = (grainDuration/127.0) * peakPosition;
-    float fallTime = ((grainDuration/127.0)) - riseTime;
+    //riseTime and fallTime are in units of second 
+    float riseTime = grainDuration * peakPosition;
+    float fallTime = grainDuration - riseTime;
     g.envelope.set(riseTime, fallTime, amplitudePeak);
 
-    g.pan = panPosition;
-
-    // permit this grain to sound!
+    //permit grain to sound! 
     g.active = true;
   }
 
   //make the next sample 
-  FloatPair operator()() {
-    // figure out if we should generate (recycle) more grains; then do so.
-    //
-    grainBirth.frequency(birthRate);
-    if (grainBirth()) {
-      for (Grain& g : grain)
-        if (!g.active) {
+  float operator()(){
+    //figure out if we should generate more grains
+    if(grainBirth()){
+      for (Grain& g : grain) //what does this for loop line mean?
+        if(!g.active){       //iterate through the vector containing grains?
           recycle(g);
           break;
-        }
+        }                  
+
     }
 
-    // figure out which grains are active. for each active grain, get the next
-    // sample; sum all these up and return that sum.
-    //
-    float left = 0, right = 0;
+    //figure out which grains are active. for each active grain, get the 
+    //next sample; sum all these up and return the sum;
+
+    float f = 0;
     activeGrainCount = 0;
-    for (Grain& g : grain)
-      if (g.active) {
+    for(Grain& g : grain)
+      if(g.active){
         activeGrainCount++;
-        float f = g();
-        left += f * (1 - g.pan);
-        right += f * g.pan;
+        f+= g(); //ask Karl to go through data flow of this line 
       }
-    return {left, right};
+    return f;
   }
 
 };
 
-
+ParameterInt Y {"location", "vSliders/3", 0, "quneo", -1, 1};
 
 
 struct MyApp : public App {
    bool show_gui = true;
    float background = 0.21;
    Granulator granulator;
-   ControlGUI gui;
-   PresetHandler presetHandler{"GranulatorPresets"};
-   PresetServer presetServer{"0.0.0.0", 9011};
    Recv server;
 
   void onCreate() override {
-    parameterServer().print();
-    
-    granulator.load("0.wav");
-    granulator.load("1.wav");
-    granulator.load("2.wav");
-    granulator.load("3.wav");
-    granulator.load("4.wav");
-    granulator.load("panlinespoonDrop.aiff");
+     initIMGUI();
+     server.open(9020,"localhost",0.05);
+     server.handler(*this);
+     server.start();
+     //ParameterServer() << Y;
+     parameterServer().addListener("127.0.0.1", 9020);
 
-   // server.open(9020,"localhost",0.05);
-    //server.handler(*this);
-    //server.start();
-    //ParameterServer() << Y;
-    parameterServer().addListener("127.0.0.1", 9020);
 
-    gui.init();
-    gui << granulator.whichClip << granulator.grainDuration
-        << granulator.startPosition << granulator.peakPosition
-        << granulator.amplitudePeak << granulator.panPosition
-        << granulator.playbackRate << granulator.birthRate 
-        << granulator.PositionRandRange;
-
-    parameterServer() << granulator.whichClip << granulator.grainDuration
-                      << granulator.startPosition << granulator.peakPosition
-                      << granulator.amplitudePeak << granulator.panPosition
-                      << granulator.playbackRate << granulator.birthRate
-                      << granulator.PositionRandRange;
-    
+     granulator.load("0.wav");
+     granulator.load("1.wav");
+     granulator.load("2.wav");
+     granulator.load("3.wav");
+     granulator.load("4.wav");
+     granulator.load("panlinespoonDrop.aiff");
   }
 
   void onAnimate(double dt) override {
     // pass show_gui for use_input param to turn off interactions
     // when not showing gui
-    navControl().active(!gui.usingInput());
+    beginIMGUI_minimal(show_gui);
+    navControl().active(!imgui_is_using_input());
   }
 
   void onDraw(Graphics& g) override {
     g.clear(background);
-    gui.draw(g);
+    ImGui::Text("Active Grains: %3d", granulator.activeGrainCount);
+    ImGui::SliderFloat("Background", &background, 0, 1);
+
+    ImGui::SliderInt("Sound Clip", &granulator.whichClip, 0, 5);
+    ImGui::SliderFloat("Start Position", &granulator.startPosition, 0, 1);
+    ImGui::SliderFloat("Playback Rate", &granulator.playbackRate, -1, 1);
+    ImGui::SliderFloat("Start Positon Randomness", &granulator.startRandomRange,1, 12);
+
+    static float volume = -7;
+    ImGui::SliderFloat("Loudness", &volume, -42, 0);
+    granulator.amplitudePeak = dbtoa(volume);
+
+    ImGui::SliderFloat("Envelop Parameter", &granulator.peakPosition, 0, 1);
+    ImGui::SliderFloat("Grain Duration", &granulator.grainDuration, 0.001, 3);
+
+    static float midi = 10;
+    ImGui::SliderFloat("Birth Frequency", &midi, -16, 85);
+    granulator.grainBirth.frequency(mtof(midi));
+
+    endIMGUI_minimal(show_gui);
   }
 
   void onSound(AudioIOData& io) override {
     while (io()) {
-      FloatPair p = granulator();
-      io.out(0) = p.l;
-      io.out(1) = p.r;
+      // this inner code block runs once per sample
+      float s = granulator();
+      io.out(0) = s;
+      io.out(1) = s;
     }
   }
 
@@ -240,8 +231,8 @@ struct MyApp : public App {
 		m >> val;
     float v = (val/127.0f)*3;
     if(v < 0.0001) v = 0.0001;
-      //cout << "vSlider3 Location: "<< v << endl;
-      //granulator.grainDuration = v;
+      cout << "vSlider3 Location: "<< v << endl;
+      granulator.grainDuration = v;
 
     }
     if(m.addressPattern() == "/quneo/longSlider/width")
@@ -269,11 +260,3 @@ int main() {
   app.start();
   return 0;
 }
-
-
-
-
-
-
-
- 

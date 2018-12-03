@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\2-granular-quneo\Release\CMakeFiles\1550565c06bcbfa1bec2a31fc6cd8bb1\2-granular-quneo_run_debug.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\AlloLib\cmake\single_file\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Jackalaka\Documents\education\2018_fall_quarter\mat240c\GrainNeo_AlloLib\build\2-granular-quneo\Release\CMakeFiles\2-granular-quneo_run_debug" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{D9D486E3-C61E-3F14-88CF-B40D1D4A331A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
