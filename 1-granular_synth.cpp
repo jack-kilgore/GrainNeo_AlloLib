@@ -23,16 +23,47 @@ using namespace osc;
 #include "synths.h"
 using namespace diy;
 
+#include <forward_list>
+#include <unordered_set>
 #include <vector>
 using namespace std;
-
-
-
 
 const int SAMPLE_RATE = 44100;
 const int BLOCK_SIZE = 512;
 const int OUTPUT_CHANNELS = 2;
 const int INPUT_CHANNELS = 2;
+
+template <typename T>
+class Bag {
+  forward_list<T*> remove, inactive;
+  unordered_set<T*> active;
+
+ public:
+  void insert_inactive(T& t) { inactive.push_front(&t); }
+
+  bool has_inactive() { return !inactive.empty(); }
+
+  T& get_next_inactive() {
+    T* t = inactive.front();
+    active.insert(t);
+    inactive.pop_front();
+    return *t;
+  }
+
+  void for_each_active(function<void(T& t)> f) {
+    for (auto& t : active) f(*t);
+  }
+
+  void schedule_for_deactivation(T& t) { remove.push_front(&t); }
+
+  void execute_deactivation() {
+    for (auto e : remove) {
+      active.erase(e);
+      inactive.push_front(e);
+    }
+    remove.clear();
+  }
+};
 
 struct FloatPair {
   float l, r;
@@ -68,24 +99,22 @@ struct Granulator {
     Array* source = nullptr;
     Line index;
     AttackDecay envelope;
-    bool active = false;
     float pan;
 
     float operator()(){
-      float f = envelope() * source->get(index());
-
-      if(index.done()) active = false;
-
-      return f;
+      return envelope() * source->get(index());
     }
   };
 
   //storing grains 
   vector<Grain> grain;
+  Bag<Grain> bag;
+
 
   Granulator(){
     //arbitrary fixed number for how many grains we will allocate 
     grain.resize(1000); //wont create more than 1000 grains 
+    for (auto& g : grain) bag.insert_inactive(g);
   }
 
   int activeGrainCount = 0;
@@ -113,7 +142,8 @@ struct Granulator {
   float playbackRate = 0;     // (-1,1)
   float PositionRandRange = 1.1;
   float panPosition = 0.5;
-  float birthRate = 55;
+  //float panPosRand = 1.0;
+  float birthRate = 8;
 
 
   //this governs the rate at which grains are created 
@@ -138,8 +168,6 @@ struct Granulator {
 
     g.pan = panPosition;
 
-    // permit this grain to sound!
-    g.active = true;
   }
 
   //make the next sample 
@@ -147,26 +175,21 @@ struct Granulator {
     // figure out if we should generate (recycle) more grains; then do so.
     //
     grainBirth.frequency(birthRate);
-    if (grainBirth()) {
-      for (Grain& g : grain)
-        if (!g.active) {
-          recycle(g);
-          break;
-        }
-    }
+     if (grainBirth())
+      if (bag.has_inactive()) recycle(bag.get_next_inactive());
 
     // figure out which grains are active. for each active grain, get the next
     // sample; sum all these up and return that sum.
     //
     float left = 0, right = 0;
-    activeGrainCount = 0;
-    for (Grain& g : grain)
-      if (g.active) {
-        activeGrainCount++;
-        float f = g();
-        left += f * (1 - g.pan);
-        right += f * g.pan;
-      }
+    bag.for_each_active([&](Grain& g) {
+      float f = g();
+      left += f * (1 - g.pan);
+      right += f * g.pan;
+      if (g.index.done()) bag.schedule_for_deactivation(g);
+    });
+    bag.execute_deactivation();
+
     return {left, right};
   }
 
@@ -232,6 +255,8 @@ struct MyApp : public App {
     ImGui::SliderFloat("Background", &background, 0, 1);
 
     ImGui::SliderInt("Sound Clip", &granulator.whichClip, 0, 5);
+    ImGui::SliderFloat("Pan Position", &granulator.panPosition, -1, 1);
+    //ImGui::SliderFloat("Randomize Pan Position", &granulator.panPosRand, 1, 3);
     ImGui::SliderFloat("Start Position", &granulator.startPosition, 0.0, 1.0);
     ImGui::SliderFloat("Playback Rate", &granulator.playbackRate, -5, 5);
     ImGui::SliderFloat("Start Positon Randomness", &granulator.PositionRandRange,1, 2);
@@ -243,9 +268,7 @@ struct MyApp : public App {
     ImGui::SliderFloat("Envelop Parameter", &granulator.peakPosition, 0, 1);
     ImGui::SliderFloat("Grain Duration", &granulator.grainDuration, 0.001, 3.0);
 
-    static float midi = 10;
-    ImGui::SliderFloat("Birth Frequency", &midi, -16, 85);
-    granulator.grainBirth.frequency(mtof(midi));
+    ImGui::SliderFloat("Birth Frequency", &granulator.birthRate, 0, 300);
 
     endIMGUI_minimal(show_gui);
     //gui.draw(g);
@@ -293,18 +316,10 @@ struct MyApp : public App {
     {
       int val;
       m >> val;
-      float v = val/1.0;
+      float v = (val/127.0)*300;
+      if (v < 0.1) v = 0.1;  
      // cout << "grainBirth " << v << endl;
-      granulator.grainBirth.frequency(mtof(v));
-    }
-    if(m.addressPattern() == "/quneo/hSliders/3/location")
-    {
-      int val;
-      m >> val;
-      float v = (10*((val/127.0f))-5);
-      //if(v < 0.001) v = 0.001;
-      //cout << "Loudness: "<< v << endl;
-      granulator.playbackRate = v;
+      granulator.birthRate = v;
     }
     if(m.addressPattern() == "/quneo/vSliders/1/location")
     {
@@ -316,6 +331,32 @@ struct MyApp : public App {
       granulator.grainDuration = v;
 
     }
+    if(m.addressPattern() == "/quneo/hSliders/3/location")
+    {
+      int val;
+      m >> val;
+      float v = (10*((val/127.0f))-5);
+      //if(v < 0.001) v = 0.001;
+      //cout << "Loudness: "<< v << endl;
+      granulator.playbackRate = v;
+    }
+    if(m.addressPattern() == "/quneo/hSliders/2/location")
+    {
+      int val;
+      m >> val;
+      float v = (2*(val/127.0f))-1;
+      //if(v < 0.001) v = 0.001;
+      //cout << "Loudness: "<< v << endl;
+      granulator.panPosition = v;
+    }
+    if(m.addressPattern() == "/quneo/hSliders/1/location")
+    {
+      int val;
+      m >> val;
+      float v = 3*(val/127.0f);
+      //granulator.panPosRand = v;
+    }
+    
     if(m.addressPattern() == "/quneo/longSlider/location")
     {
       int val;
