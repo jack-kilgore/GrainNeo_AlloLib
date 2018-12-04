@@ -206,6 +206,7 @@ struct MyApp : public App {
    PresetHandler presetHandler{"GranulatorPresets"};
    PresetServer presetServer{"0.0.0.0", 9011};
    Recv server;
+   Send client;
 
   void onCreate() override {
     initIMGUI();
@@ -218,10 +219,14 @@ struct MyApp : public App {
     granulator.load("4.wav");
     granulator.load("panlinespoonDrop.aiff");
 
-    server.open(9020,"localhost",0.05);
-    server.handler(*this);
-    server.start();
-    parameterServer().addListener("127.0.0.1", 9020);
+    //server.open(9020,"localhost",0.05);
+    //server.handler(*this);
+    //server.start();
+    //parameterServer().addListener("127.0.0.1", 9020);
+
+    
+    client.open(9012,"127.0.0.1");
+
 
 
 
@@ -260,6 +265,9 @@ struct MyApp : public App {
     ImGui::SliderFloat("Start Position", &granulator.startPosition, 0.0, 1.0);
     ImGui::SliderFloat("Playback Rate", &granulator.playbackRate, -5, 5);
     ImGui::SliderFloat("Start Positon Randomness", &granulator.PositionRandRange,1, 2);
+    float test = granulator.PositionRandRange;
+    int b = client.send("/quneo/leds/vSliders/3/1",test);
+
 
     static float volume = -7;
     ImGui::SliderFloat("Loudness", &granulator.amplitudePeak, 0.0, 1.0);
@@ -293,7 +301,13 @@ struct MyApp : public App {
     //look into how to fit the below name space of QuNeo into 
     // map certain positions on the pads 
   void onMessage(osc::Message& m) override {
-    m.print();
+    //m.print(); 
+
+    //only updates quneo when touched again (aka useless)
+    //if(granulator.PositionRandRange == granulator.PositionRandRange){
+      //client.send("/quneo/leds/vSliders/3/7",granulator.PositionRandRange);
+    //}
+
     if(m.addressPattern() == "/quneo/vSliders/0/location")
     {
       int val;
