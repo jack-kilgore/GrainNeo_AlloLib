@@ -1,12 +1,3 @@
-//make a load_dir
-// git pull
-// git submodule update --init --recursive
- 
-
- //problems with clip drag and drop 
-  // cant put bufnum into array size 
-  // cant toggle any other sample except 1st 
-
 #include "Gamma/SoundFile.h"
 using namespace gam;
 
@@ -95,12 +86,12 @@ struct Granulator {
 
   //keep some sound clips in memory 
   vector<Array*> soundClip;
+  /*----GrainRate Sample Change Experiments 
   vector<int> activeClipsIndex;
   bool arr[6];
   void make_bool_arr(){
     for(int i=0; i < bufnum; i++) arr[i] = false;
   }
-
   void clipIndex(){
     //activeClipsIndex.push_back(1);
     if (arr[bufnum]){
@@ -111,6 +102,7 @@ struct Granulator {
     }
     
   }
+  */
   
   
   
@@ -139,12 +131,12 @@ struct Granulator {
 
   int activeGrainCount = 0;
 
-  int whichClip = 0;   //(0, source.size())
-  float grainDuration = 0.01; //in seconds 
-  float startPosition = 0.25; // (0,1)
-  float peakPosition = 0.1;   // (0,1)
-  float amplitudePeak = 0.9;  // (0,1)
-  float playbackRate = 0;     // (-1,1)
+  int whichClip = 0;   
+  float grainDuration = 0.01; 
+  float startPosition = 0.25; 
+  float peakPosition = 0.1;   
+  float amplitudePeak = 0.9;  
+  float playbackRate = 0;    
   float PositionRandRange = 0.5;
   float panPosition = 0.5;
   float panPosRand = 0;
@@ -163,10 +155,8 @@ struct Granulator {
   //this method makes a new grain out of a dead/inactive one. 
   // 
   void recycle(Grain& g) {
-    // //
-     if(activeClipsIndex.size()==0) g.source = soundClip[whichClip];
-     else g.source = soundClip[activeClipsIndex[0]]; //+ rand()%(activeClipsIndex.size()-1)
-    // startTime and endTime are in units of sample
+    g.source = soundClip[whichClip];
+    //else g.source = soundClip[whichClip+rand()%bufnum]; 
     float startTime = g.source->size * startPosition * rnd::uniformS(PositionRandRange/1.0);
     float endTime =
         startTime + (grainDuration+rnd::uniformS(grainDurRand/1.0)) * ::SAMPLE_RATE * powf(2.0, playbackRate);
@@ -234,7 +224,6 @@ struct MyApp : public App {
     granulator.load("ceramic_shards1-mono.wav");
     granulator.load("TASCAM_0812.wav");
     granulator.load("0.aiff");
-
     //granulator.make_bool_arr();
     
     client.open(9012,"127.0.0.1");
@@ -261,12 +250,11 @@ struct MyApp : public App {
     ImGui::SliderFloat("Randomize Grain Duration", &granulator.grainDurRand, 0, 2);
     ImGui::SliderFloat("Start Position", &granulator.startPosition, 0.0, 1.0);
     ImGui::SliderFloat("Randomize Start Positon", &granulator.PositionRandRange,0, 1);
-    ImGui::SliderFloat("Playback Rate", &granulator.playbackRate, -5, 5);
     ImGui::SliderFloat("Loudness", &granulator.amplitudePeak, 0.0, 1.0);
+    ImGui::SliderFloat("Playback Rate", &granulator.playbackRate, -3, 3);
     ImGui::SliderFloat("Envelop Parameter", &granulator.peakPosition, 0, 1);
 
     endIMGUI_minimal(show_gui);
-    //gui.draw(g);
   }
 
   void onSound(AudioIOData& io) override {
@@ -315,16 +303,16 @@ struct MyApp : public App {
       granulator.grainDuration = v;
 
     }
-    if(m.addressPattern() == "/quneo/hSliders/3/location")
+    if(m.addressPattern() == "/quneo/rotary/0/direction")
     {
       int val;
       m >> val;
-      float v = (10*((val/127.0f))-5);
+      float v = (6*((val/127.0f))-3);
       //cout << "Loudness: "<< v << endl;
       granulator.playbackRate = v;
     }
 
-    if(m.addressPattern() == "/quneo/rotary/0/direction")
+    if(m.addressPattern() == "/quneo/hSliders/3/location")
     {
       int val;
       m >> val;
@@ -486,7 +474,7 @@ struct MyApp : public App {
     {
       int val;
       m >> val;
-      float v = (10*((val/127.0f))-5);
+      float v = (6*((val/127.0f))-3);
       //cout << "Loudness: "<< v << endl;
       granulator.playbackRate = v;
     }
@@ -548,7 +536,7 @@ struct MyApp : public App {
     {
       int val;
       m >> val;
-      float v = (10*((val/127.0f))-5);
+      float v = (6*((val/127.0f))-3);
       //cout << "Loudness: "<< v << endl;
       granulator.playbackRate = v;
     }
@@ -584,7 +572,7 @@ struct MyApp : public App {
     {
       int val;
       m >> val;
-      float v = (10*((val/127.0f))-5);
+      float v = (6*((val/127.0f))-3);
       //cout << "Loudness: "<< v << endl;
       granulator.playbackRate = v;
     }
@@ -594,7 +582,7 @@ struct MyApp : public App {
     {
       int val;
       m >> val;
-      float v = (10*((val/127.0f))-5);
+      float v = (6*((val/127.0f))-3);
       //cout << "Loudness: "<< v << endl;
       granulator.playbackRate = v;
     }
